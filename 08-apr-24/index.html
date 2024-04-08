@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .rosso{ 
+        color: red;
+        background-color: lightcoral;
+    }
+    .blue { 
+        color: blue;
+        background-color: lightblue;
+    }
+    .green { 
+        color: green;
+        background-color: lightgreen;
+    }
+    .pink { 
+        color: pink;
+        background-color: lightpink;
+    }
+</style>
+<body id="paragrafo">
+    Il colore è black
+    <button onclick="change_background" id="cambio">Change color</button>
+
+    <script>
+        const div = document.getElementById('paragrafo')
+        const cambio = document.getElementById('cambio')
+    cambio.addEventListener('click', function() {
+  div.classList.remove('rosso', 'green', 'blue', 'pink');
+  
+  const coloriDisponibili = ['rosso', 'green', 'blue', 'pink'];
+  const coloreCasuale = coloriDisponibili[Math.floor(Math.random() * coloriDisponibili.length)];
+  div.classList.add(coloreCasuale);
+    });
+    </script>
+</body>
+</html>
