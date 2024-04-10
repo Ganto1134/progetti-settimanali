@@ -4,14 +4,14 @@
 */
 
 function stringone(str1, str2) {
-  var parte1 = str1.substring(0, 2);
-  var parte2 = str2.slice(-3);
-  var risultato = parte1.concat(parte2) ;
+  let parte1 = str1.slice(0, 2);
+  let parte2 = str2.slice(-3);
+  let risultato = parte1.concat(parte2) ;
   risultato = risultato.toUpperCase();
   console.log(risultato);
 }
 
-console.log(stringone('Primo', 'Secondo'))
+stringone('Primo', 'Secondo');
 
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
@@ -25,14 +25,14 @@ const randomNumeri = () => {
   return 'I numeri sono ' + array
 }
 
-console.log(randomNumeri())
+console.log(randomNumeri());
 
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
 const soloPari = (array) => {
-  return array.filter((numero) => numero % 2 === 0)
+  return array.filter((numero) => numero % 2 === 0);
 }
 
 console.log(soloPari([24, 211, 3543, 45634, 545, 62, 77, 82, 97, 1340]));
@@ -56,7 +56,7 @@ console.log(sommaNumeri([24, 211, 3543, 45634, 545, 62, 77, 82, 97, 1340]));
 */
 
 const reduceSommaNumeri = (array) => {
-  return array.reduce((a, b) => a + b, 0)
+  return array.reduce((a, b) => a + b, 0);
 }
 
 console.log(reduceSommaNumeri([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
@@ -69,16 +69,16 @@ const incrementaArray = (array, n) => {
   return array.map((elemento) => elemento + n)
 }
 
-console.log(incrementaArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 10))
+console.log(incrementaArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 12));
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 
 const lunghezzaArray = (array) => {
-  return array.map((elemento) => elemento.length)
+  return array.map((elemento) => elemento.length);
 }
-console.log(lunghezzaArray(['Antonio', 'Franco', 'Mario']))
+console.log(lunghezzaArray(['Antonio', 'Franco', 'Mario']));
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
@@ -88,13 +88,13 @@ const soloDispari = () => {
   const array = [];
   for (let i = 0; i < 100; i++) {
     if (i % 2 !== 0) {
-      array.push(i)
+      array.push(i);
     }
   }
   return array
 }
 
-console.log(soloDispari())
+console.log(soloDispari());
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -217,7 +217,7 @@ const movies = [
 */
 
 const filmVecchio = (array) => {
-  let result = { Year: 2100 }
+  let result = { Year: 2024 }
   array.forEach((movie) => {
     let currentYear = parseInt(movie.Year)
     if (currentYear < result.Year) {
