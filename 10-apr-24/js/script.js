@@ -2,8 +2,6 @@ const inputLista = document.getElementById('input')
 
 const listone = document.getElementById('lista');
 
-const elementi = listone.getElementsByTagName('li');
-
 function aggiungiLista() { 
     if (inputLista.value === '') { 
         alert('Devi scrivere qualcosa da fare');
@@ -17,12 +15,15 @@ function aggiungiLista() {
     } ;
 };
 
-
-
-  listone.addEventListener('click', function(e){ 
+ listone.addEventListener('click', function(e){ 
         if (e.target.tagName === 'LI'){ 
             e.target.classList.toggle('classList')
             }  else if(e.target.tagName === 'I') { 
             e.target.parentElement.remove();
     }  
     }); 
+
+  /*  function checked(evt) { 
+        evt.target.classList.toggle('classList');
+    }
+    listone.addEventListener('click', checked, false) */
