@@ -6,7 +6,7 @@ function creaTabellone() {
     var tabellone = document.createElement('div');
     tabellone.classList.add('tabellone');
     var numeriTotali = 76;
-    for (var i = 1; i <= numeriTotali; i++) {
+    for (let i = 1; i <= numeriTotali; i++) {
         numeriDisponibili.push(i);
         var cella = document.createElement('div');
         cella.classList.add('cella');
