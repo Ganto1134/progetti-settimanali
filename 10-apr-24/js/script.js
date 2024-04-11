@@ -27,3 +27,8 @@ function aggiungiLista() {
         evt.target.classList.toggle('classList');
     }
     listone.addEventListener('click', checked, false) */
+
+    /* const pezziLista = listone.getElementByTagName('li')
+    pezziLista.addEventListener('click', function(){ 
+        pezziLista.classList.toggle('classList');
+    }); */

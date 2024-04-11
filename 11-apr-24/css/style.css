@@ -1,0 +1,32 @@
+*:not(div) { 
+    margin: 2rem;
+}
+body{ 
+    text-align: center;
+    background-color: lightblue;
+ }
+
+div { 
+    background-color: white;
+}
+.tabellone {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    width: 73%;
+    margin-left: 13.5%;
+}
+
+.cella {
+    width: 65px;
+    height: 65px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.evidenziata { 
+    background-color: lightgray;
+}
